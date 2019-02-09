@@ -1,0 +1,125 @@
+:root {
+  --first: rgb(81, 87, 120);
+  --second: rgb(133, 144, 167);
+  --third: rgb(213, 238, 236);
+  --fourth: rgb(185, 218, 219);
+  --fifth: rgb(146, 183, 191);
+}
+
+body {
+  background-color: var(--fifth);
+}
+
+h1 {
+  background-color: var(--first);
+
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+input {
+  width: 100%;
+}
+
+h1,
+input,
+.Info .col,
+li {
+  text-align: center;
+}
+
+.container {
+  margin: 2% 10%;
+  width: 520px;
+  padding: 0;
+}
+
+.container * {
+  margin: 0;
+
+}
+
+li:nth-of-type(even) {
+  background-color: var(--fourth);
+}
+
+li:nth-of-type(odd) {
+  background-color: var(--third);
+}
+
+.Info {
+  background-color: var(--second);
+
+}
+
+.Info .col {
+  border-left: 1px solid var(--third);
+}
+
+.Info .col:first-of-type {
+  border-left: none;
+}
+
+.disabled {
+  opacity: 0;
+}
+
+.crossed {
+  text-decoration-line: line-through;
+}
+
+.liHolder {
+  position: relative;
+}
+
+li {
+  display: inline-block;
+  width: 520px;
+  animation-name: intro;
+  animation-duration: 1s;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fa-trash-alt {
+  opacity: 0;
+  line-height: 1.59;
+  width: 0;
+  position: absolute;
+  background-color: red;
+  transition: .3s linear;
+}
+
+
+.fa-check {
+  float: right;
+  padding: 5px;
+}
+
+li:hover+.fa-trash-alt,
+.fa-trash-alt:hover {
+  opacity: 1;
+  width: 30px;
+  padding: 0 5px;
+}
+
+.text {
+  display: inline-block;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
